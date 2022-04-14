@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umake: 3D Design & CAD Modeling for iPhone, iPad and Mac</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/favicon.ico.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header  container-fluid ps-5" id="navbar">
+    <div
+      class="navbar ps-5 d-flex row flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-1">
+      <a href="#nav"
+        class="d-flex align-items-center col-7 col-sm-12 col-md-2 col-lg-4 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="94" height="29" viewBox="0 0 94 29" fill="none">
+          <path
+            d="M44.297 11.8519V21.8646H41.6622V20.3917C41.1418 21.3847 40.1009 22.0798 38.6696 22.0798C36.5065 22.0798 34.9614 20.8551 34.9614 18.2071V11.8519H37.6125V17.5285C37.6125 18.9518 38.2305 19.7462 39.4178 19.7462C40.8328 19.7462 41.6622 18.687 41.6622 16.9989V11.8519H44.297ZM62.8218 16.8996C62.8218 13.7386 64.9199 11.6367 67.6034 11.6367C69.0509 11.6367 70.2219 12.2325 70.7587 13.2255V11.8519H73.4097V21.8646H70.8562V20.3917C70.1569 21.484 69.0672 22.0798 67.636 22.0798C64.8873 22.0798 62.8218 20.0276 62.8218 16.8996ZM70.8562 16.8996C70.8562 14.9964 69.5226 13.9703 68.1401 13.9703C66.7902 13.9703 65.4891 15.0295 65.4891 16.8996C65.4891 18.7367 66.7902 19.7793 68.1401 19.7793C69.5226 19.7793 70.8562 18.7698 70.8562 16.8996ZM84.453 21.8646H81.3954L78.6793 17.843L77.6546 18.9187V21.8481H75.0036V7.08545H77.6546V15.5756L80.9725 11.8519H84.2253L80.4033 15.9563L84.453 21.8646ZM91.7393 18.0416L94 18.9518C93.3332 20.8551 91.7718 22.0798 89.4136 22.0798C86.3884 22.0798 84.209 20.011 84.209 16.8003C84.209 13.9537 86.1607 11.6533 89.1045 11.6533C91.8206 11.6533 93.935 14.0696 93.6422 16.8003C93.6259 16.9989 93.5934 17.181 93.5446 17.3796H86.8601C86.9089 18.9684 88.1287 19.7628 89.4623 19.7628C90.7147 19.7628 91.4466 19.1008 91.7393 18.0416ZM86.8601 15.5756H91.0725C91.0725 15.5756 91.0888 15.526 91.0888 15.4929C91.0888 14.4833 90.2755 13.8213 89.0883 13.8213C88.0474 13.8213 87.1041 14.4502 86.8601 15.5756ZM59.1786 7.08545L53.9091 15.3274L48.6395 7.08545H46.2812V21.8812H49.0461V12.7787L53.4699 19.4318H54.3319L58.7558 12.7787V21.8812H61.5207V7.08545H59.1786Z"
+            fill="black" />
+          <path
+            d="M0 10.73C0 6.10249 0 3.78874 1.24622 2.20925C1.5288 1.8511 1.85267 1.5275 2.21113 1.24516C3.79194 0 6.10766 0 10.7391 0H18.2855C22.9169 0 25.2326 0 26.8134 1.24516C27.1719 1.5275 27.4958 1.8511 27.7783 2.20925C29.0246 3.78874 29.0246 6.10249 29.0246 10.73V18.27C29.0246 22.8975 29.0246 25.2113 27.7783 26.7907C27.4958 27.1489 27.1719 27.4725 26.8134 27.7548C25.2326 29 22.9169 29 18.2855 29H10.7391C6.10766 29 3.79194 29 2.21113 27.7548C1.85267 27.4725 1.5288 27.1489 1.24622 26.7907C0 25.2113 0 22.8975 0 18.27V10.73Z"
+            fill="url(#paint0_linear)" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M14.8259 6.92644C15.7309 6.06958 16.9213 5.60205 18.3051 5.60205C19.4282 5.60205 20.4344 5.9077 21.268 6.49846C22.0933 7.08331 22.6704 7.89097 23.042 8.77806C23.7723 10.5213 23.7644 12.6823 23.2474 14.7024C22.8084 16.418 21.9478 18.1997 20.6775 19.6757C21.6159 19.9417 22.6682 19.8016 23.8441 18.9172L25.6292 21.2869C23.4236 22.9456 21.0781 23.1307 19.0046 22.2173C18.7219 22.0928 18.4476 21.9495 18.182 21.7895C16.8432 22.5836 15.2607 23.068 13.4402 23.068C9.35546 23.068 6.55249 20.6243 5.28385 17.3406C4.04002 14.1213 4.23536 10.0778 5.90886 6.46249L8.60308 7.70752C7.22571 10.6831 7.13245 13.8897 8.05309 16.2725C8.94892 18.5912 10.7635 20.1021 13.4402 20.1021C14.2868 20.1021 15.0721 19.943 15.7889 19.6575C15.269 19.0149 14.8148 18.3084 14.4321 17.5731C13.1692 15.1465 12.6841 12.3445 13.1774 10.0395C13.4265 8.87551 13.9441 7.76135 14.8259 6.92644ZM18.2361 17.9601C19.2615 16.8666 19.991 15.4548 20.3715 13.9677C20.7822 12.3627 20.7124 10.8987 20.3038 9.9232C20.1059 9.45091 19.8444 9.12577 19.5507 8.91765C19.2653 8.71544 18.8723 8.56796 18.3051 8.56796C17.6275 8.56796 17.1836 8.78012 16.8677 9.07924C16.5286 9.40032 16.2388 9.91844 16.0802 10.6597C15.758 12.165 16.0562 14.2649 17.0658 16.2048C17.4121 16.8704 17.8087 17.4605 18.2361 17.9601Z"
+            fill="white" />
+          <defs>
+            <linearGradient id="paint0_linear" x1="14.5123" y1="0" x2="14.5123" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FE5714" />
+              <stop offset="1" stop-color="#E6361D" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+
+      <div class="dis col-8 col-sm-12 col-md-10 col-lg-8 text-end ">
+        <ul class="nav ms-2 mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-dark">Umake+ > </a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Features > </a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Why uMake > </a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Explore</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Learn</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+          <button type="button" class="btn btn-md ms-3 px-4 btn-black">Get Started</button>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Main content -->
+  <main class="main">
+    <!-- 1st Hero -->
+    <div class="container col-xxl-8 px-4 pt-5 mt-2">
+      <div class="row flex-lg-row align-items-center">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8 text-center text-black">
+          <h1 class="display-1 fw-bold">Design in 3D. Publish Anywhere.</h1>
+          <p class="fs-4">Create beautiful designs — photos, presentations, or 3D models — using a library of content
+            and easy-to-use tools in uMake app for iPhone, iPad and Mac (Apple Silicon).</p>
+          <button type="button" class="btn btn-lg px-4 py-3 btn-black">Get Started</button>
+          <a href="#" class="text-black link">
+            <p class="watch fs-4 mt-2">Watch Video <img alt="play"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuMTI2NjMgMC4yMjA0OTRDMS4yMjUwNyAtMC4yOTY2NTUgMC40OTQxNDEgMC4xMjY5OTkgMC40OTQxNDEgMS4xNjZWOC44MzMzNEMwLjQ5NDE0MSA5Ljg3MzM3IDEuMjI1MDcgMTAuMjk2NSAyLjEyNjYzIDkuNzc5ODFMOC44MjgyNyA1LjkzNjQ3QzkuNzMwMTQgNS40MTkxNCA5LjczMDE0IDQuNTgwOTkgOC44MjgyNyA0LjA2Mzc4TDIuMTI2NjMgMC4yMjA0OTRaIiBmaWxsPSIjM0I4OUY3Ii8+Cjwvc3ZnPgo="
+                class="lazyLoad isLoaded"></p>
+          </a>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
+    </div>
+    <!--2nd Hero-->
+    <div class="container col-xxl-8 px-2">
+      <div class="row flex-lg-row align-items-center">
+        <div class="col-lg-12">
+          <video playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="video1"
+            style="width: 100%; height: 100%;">
+            <source type="video/mp4"
+              src="https://umake.cdn.prismic.io/umake/101bfbaf-53a1-4cc2-8171-596076610067_umake_hp_hero.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--3rd Hero-->
+    <div class="container col-xxl-8 px-4">
+      <div class="row flex-lg-row justify-content-center align-items-center g-5">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-sm-12 col-lg-10 img">
+          <img src="./img/editor-choice.webp" alt="Editor-Choice" class="col-sm-2 col-lg-3 img-fluid" width="100%"
+            height="100%">
+          <img src="./img/app-of-the-year.webp" alt="App of the year" class="col-sm-4 col-lg-4 img-fluid" width="100%"
+            height="100%">
+          <img src="./img/best-of-2015.webp" alt="Best of 2015" class="col-sm-2 col-lg-3 img-fluid" width="100%"
+            height="100%">
+        </div>
+      </div>
+    </div>
+    <!-- 4th Hero -->
+    <div class="container col-xxl-8 px-4 py-5 mt-2">
+      <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-10 text-center text-black">
+          <h3 class="display-4">3D Design. Easier Than Ever.</h3>
+          <p class="fs-4">Design quickly with a touch of a button. Choose from a rich library of templates, elements,
+            textures: from furniture to graphic design assets.</p>
+        </div>
+        <div class="col-lg-1">
+        </div>
+      </div>
+    </div>
+    <!-- 5th Hero -->
+    <div class="container col-xxl-8 px-4">
+      <div class="row flex-lg-row align-items-center">
+        <div class="col-sm-12 col-lg-7">
+          <div class="img row div5th">
+            <video playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="col-lg-9 main-media"
+              style="width: 85%; height: 100%;">
+              <source type="video/mp4"
+                src="https://umake.cdn.prismic.io/umake/2a4ac35f-f68a-4190-8621-db83db9a47eb_hp_umakeplus.mp4">
+            </video>
+            <img alt="image"
+              src="https://images.prismic.io/umake/f8b72546-58ff-4755-88a1-c292f89adab3_hp_umakeplus_iphone01.png?auto=compress,format"
+              class="col-sm-1 col-lg-3 img-fluid phone lazyLoad isLoaded" style="width: 25%; height: 75%;">
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+          <p class="lead">uMake gives you complete freedom to transform your imagination into a reality. You can create
+            anything from a simple 3D object to an entire 3D scene. Start from a template or quickly drag & drop 3D
+            elements, textures, HDR environments, fonts, photos, etc. into your canvas.</p>
+          <button type="button" class="btn btn-outline-dark btn-lg px-4">View all &rarr;</button>
+        </div>
+      </div>
+    </div>
+    <!-- 6th Hero -->
+    <div class="container col-xxl-8 px-4 py-5 my-3">
+      <div class="row flex-lg-row align-items-center">
+        <h4 class="display-4">Discover uMake+</h4>
+        <div class="col-lg-3">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-templets.webp" alt="Templates" class="img-fluid" width="100%" height="100%">
+            <p class="lead fs-4 fw-bold">Templates</p>
+          </a>
+        </div>
+        <div class="col-lg-3 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-elements.webp" alt="Elements" class="img-fluid" width="100%" height="100%">
+            <p class="lead fs-4 fw-bold">Elements</p>
+          </a>
+        </div>
+        <div class="col-lg-3 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-textures.webp" alt="Textures" class="img-fluid" width="100%" height="100%">
+            <p class="lead fs-4 fw-bold">Textures</p>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-enviroment1.webp" alt="Environments" class="img-fluid" width="100%" height="100%">
+            <p class="lead fs-4 fw-bold">Environments</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 1st section -->
+    <section class="container-fluid bg-Jav">
+      <!-- 7th Hero -->
+      <div class="container col-xxl-8 px-5 mt-2">
+        <div class="row flex-lg-row align-items-center g-5">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-10 text-center text-white">
+            <h4 class="display-4">All the tools you need, on the go</h4>
+            <p class="fs-3">Designing in 3D is now easier than ever. Drag and drop from the content library, or draw
+              precisely using the precision tool. Everything you need is within reach.</p>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div>
+      </div>
+      <!-- 8th Hero -->
+      <div class="container col-xxl-8 py-5 px-4">
+        <div class="row flex-lg-row align-items-center py-5">
+          <div class="col-sm-12 col-lg-7">
+            <div class="img row">
+              <video playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="col-lg-9 main-media-white"
+                style="width: 100%; height: 100%;">
+                <source type="video/mp4"
+                  src="https://umake.cdn.prismic.io/umake/9f7c7ba2-3a17-40c6-9b53-f62dd2ad7e52_hp_design_min.mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-4 my-4">
+            <div class="col-9 py-3 fw-bold fs-3 btn disabled btn-lg blk-y yellow"
+              style="transform: translate(0px, 0px); opacity: 1;">
+              Easy &amp; Simple
+              <div class="text-white py-1 fw-bold fs-5 btn disabled blk-p pink"
+                style="transform: translate(0px, 0px); opacity: 1;">
+                Designing
+              </div>
+            </div>
+            <p class="lead text-white">Create 3D text in seconds, or drag & drop shapes and objects from our vast
+              content library. Already got something? It's a cinch to import file types like SketchUp or OBJ. Rather
+              draw it yourself? Use the freestyle tool to sketch and doodle rapidly in 3D. Let your ideas flow!</p>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More &rarr;</button>
+          </div>
+        </div>
+      </div>
+      <!-- 9th Hero -->
+      <div class="container col-xxl-8 py-5 px-4">
+        <div class="row flex-lg-row align-items-center py-5">
+          <div class="col-sm-12 col-lg-7 py-5">
+            <div class="img row">
+              <video playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="col-lg-9 main-media-white"
+                style="width: 100%; height: 100%;">
+                <source type="video/mp4"
+                  src="https://umake.cdn.prismic.io/umake/7ae387b0-fefc-4ee0-a457-0e8cbb43f664_hp_precise_min.mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-4">
+            <div class="text-white col-10 py-3 px-3 fw-bold fs-3 btn disabled btn-lg blk-y pink"
+              style="transform: translate(0px, 0px); opacity: 1;">
+              Precise & Powerful
+              <div class="py-1 fw-bold col-lg-7 fs-5 btn disabled blk-p yellow"
+                style="transform: translate(0px, 0px); opacity: 1;">
+                3D Modeling
+              </div>
+            </div>
+            <p class="lead text-white">Create 3D text in seconds, or drag & drop shapes and objects from our vast
+              content library. Already got something? It's a cinch to import file types like SketchUp or OBJ. Rather
+              draw it yourself? Use the freestyle tool to sketch and doodle rapidly in 3D. Let your ideas flow!</p>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More &rarr;</button>
+          </div>
+        </div>
+      </div>
+      <!-- 10th Hero -->
+      <div class="container col-xxl-8 py-5 px-4">
+        <div class="row flex-lg-row align-items-center py-5">
+          <div class="col-sm-12 col-lg-7">
+            <div class="img row">
+              <video playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="col-lg-9 main-media-white"
+                style="width: 100%; height: 100%;">
+                <source type="video/mp4"
+                  src="https://umake.cdn.prismic.io/umake/3f55f06a-956d-46ee-9885-1b6bba24f38f_hp_creativity_min.mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-4 my-4">
+            <div class="text-white col-10 py-3 fw-bold fs-3 btn disabled btn-lg blk-y blue"
+              style="transform: translate(0px, 0px); opacity: 1;">
+              Infinite Creativity
+              <div class="py-1 fw-bold fs-5 btn disabled blk-p yellow"
+                style="transform: translate(0px, 0px); opacity: 1;">
+                Exploring
+              </div>
+            </div>
+            <p class="lead text-white">Create 3D text in seconds, or drag & drop shapes and objects from our vast
+              content library. Already got something? It's a cinch to import file types like SketchUp or OBJ. Rather
+              draw it yourself? Use the freestyle tool to sketch and doodle rapidly in 3D. Let your ideas flow!</p>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- 11th Hero -->
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-start py-5">
+        <div class="col-sm-12 col-lg-5">
+          <div class="row row-cols-lg-1 align-items-start g-4 py-5">
+            <div class="col py-5">
+              <div class=" div11th">
+                <img alt="Slides"
+                  src="https://images.prismic.io/umake/b474ae5c-a664-4a70-a2d0-e6fff1eb66bb_idea1n.png?auto=compress,format"
+                  class="slides">
+              </div>
+              <div class="card card-cover h-100 overflow-hidden text-black bg-light round shadow-lg">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1 text-center">
+                  <h2 class="pt-5 mt-5 mb-4 display-6 lh-1">Smart slides</h2>
+                  <p class="ps-2 fs-5">Configure each element in your scene slide-by-slide. Create different content
+                    variations or tell your story from different angles.</p>
+                  <ul class="d-flex list-unstyled mt-auto">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col py-5">
+              <div class=" div11th">
+                <img alt="Create"
+                  src="https://images.prismic.io/umake/be45333c-9324-4daa-88de-345ed728b6c5_idea2n.png?auto=compress,format"
+                  class="slides">
+              </div>
+              <div class="card card-cover h-100 overflow-hidden text-black bg-light round shadow-lg my-2">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1 text-center border">
+                  <h2 class="pt-5 mt-5 mb-4 display-6 lh-1">Powerful rendering</h2>
+                  <p class="ps-2 fs-5">uMake is the first design app to bring on-device rendering to iOS devices. Create
+                    beautiful, rendered images of your creations with a tap of a button.</p>
+                  <ul class="d-flex list-unstyled mt-auto">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col py-5">
+              <div class=" div11th">
+                <img alt="Markups"
+                  src="https://images.prismic.io/umake/48a37016-f2ad-4cde-9332-5e52668510f2_idea3n.png?auto=compress,format"
+                  class="slides">
+              </div>
+              <div class="card card-cover h-100 overflow-hidden text-black bg-light round shadow-lg my-2">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1 text-center">
+                  <h2 class="pt-5 mt-5 mb-4 display-6 lh-1">Make your mark</h2>
+                  <p class="ps-2 fs-5">Capture your views. Write, draw, and mark up your slides with custom notes and
+                    sketches.</p>
+                  <ul class="d-flex list-unstyled mt-auto">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6 position-sticky">
+          <h3 class="display-4">Present your ideas in the best light</h3>
+          <p class="lead">uMake's groundbreaking on-device rendering feature will make your designs shine in a new
+            light! Create full presentations using the Slides feature or quickly annotate and mark up your design using
+            the Markup tools. Everything you need, all in one place.</p>
+          <button type="button" class="btn btn-outline-dark btn-lg px-4">Learn more &rarr;</button>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd section -->
+    <section class="container-fluid blue">
+      <!-- 12th hero -->
+      <div class="container col-xxl-8 px-5 mt-2">
+        <div class="row flex-lg-row align-items-center g-5">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-10 text-center text-white">
+            <h4 class="display-4">Share & Publish Anywhere</h4>
+            <p class="fs-3">Now that you have a beautiful design, you can share and publish anywhere. Think photos,
+              videos, social media, augmented reality or 3D file exports — a variety of options to fit your personal
+              workflow.</p>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn more &rarr;</button>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div>
+      </div>
+      <!-- 13th hero -->
+      <div class="row g-4 py-5 px-5 row-cols-1 row-cols-lg-2 justify-content-center div13th zin">
+        <div class="col-1 bg-hicon">
+          <img src="./img/bg-icon.png" alt="bg-icon" class="bg-icon" width="17%" height="auto">
+          <img src="./img/bg-icon1.png" alt="bg-icon1" class="bg-icon1" width="9%" height="auto">
+          <img src="./img/bg-icon2.png" alt="bg-icon2" class="bg-icon2" width="25%" height="auto">
+          <img src="./img/bg-icon3.png" alt="bg-icon3" class="bg-icon3" width="7%" height="auto">
+          <img src="./img/bg-icon4.png" alt="bg-icon4" class="bg-icon4" width="13%" height="auto">
+          <img src="./img/bg-icon5.png" alt="bg-icon5" class="bg-icon5" width="5%" height="auto">
+        </div>
+        <div class="feature px-5 py-3 mx-5 col-lg-5 bg-light round">
+          <div class="feature-icon py-3 bg-gradient">
+            <img alt="uMake fits your workflow - use uMake with other apps"
+              src="https://umake.cdn.prismic.io/umake/ebc3a8b8-884f-4a58-b807-3a49697780fa_share1.svg"
+              class="lazyLoad isLoaded">
+          </div>
+          <h2 class="fw-bold tblue">Work in your flow</h2>
+          <p class="tblue">Export to file formats that allow you to work in other apps and software. uMake supports
+            exporting to multiple file formats, including PNG, STL, IGES. You can continue your work in other apps such
+            as Instagram, Facebook, Procreate, SketchUp, SolidWorks and more.</p>
+        </div>
+        <div class="feature px-5 py-3 mx-5 col-lg-5 bg-light round">
+          <div class="feature-icon py-3 bg-gradient">
+            <img alt="Project your 3D designs in the real world using Augmented Reality - AR"
+              src="https://umake.cdn.prismic.io/umake/4a3dc187-27e2-4990-90b2-ea674e5de28c_share2.svg"
+              class="lazyLoad isLoaded">
+          </div>
+          <h2 class="fw-bold tblue">Augment your design</h2>
+          <p class="tblue">Want to see how your designs would look in the real world? View your designs in augmented
+            reality (AR) right in uMake, or export them as USDz files and send them to anyone to view on their iOS
+            device.</p>
+        </div>
+        <div class="feature px-5 py-3 col-lg-6 bg-light round">
+          <div class="feature-icon py-3 bg-gradient">
+            <img alt="Share and export your 3D design into multiple file formats, or present it to others"
+              src="https://umake.cdn.prismic.io/umake/01080ad1-f978-4181-bf64-f8b3d1ff9819_share3.svg"
+              class="lazyLoad isLoaded">
+          </div>
+          <h2 class="fw-bold tblue">Share with others</h2>
+          <p class="tblue">Using the Markup tools, you can collaborate with others on your design, make changes on the
+            go, export your creations as photos or presentations, and let others know about your ideas.</p>
+        </div>
+      </div>
+    </section>
+    <!-- 14th Hero -->
+    <div class="container-fluid col-xxl-8 px-4 py-5 bg-gradient1">
+      <div class="row flex-lg-row py-4 align-items-center">
+        <div class="col-lg-1"></div>
+        <div class="col-sm-12 col-lg-5">
+          <div class="img div5th">
+            <img alt="object"
+              src="https://images.prismic.io/umake/4485b773-872c-4ec8-94d5-3bde51497a5c_join0054+5.png?auto=compress,format"
+              class="img img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 text-white">
+          <h4 class="display-4">Join uMake+</h4>
+          <p class="lead">uMake+ is an all-in-one app where you can easily find everything you need - from Mobile and
+            AR-friendly 3D models to materials, textures, shapes & colors. New content is added weekly.</p>
+          <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More &rarr;</button>
+        </div>
+        <div class="col-lg-1"></div>
+      </div>
+    </div>
+    <!-- 15th Hero -->
+    <div class="container-fluid col-xxl-8 px-4 py-5 my-3">
+      <h4 class="display-4 ps-5 ms-4">Discover uMake+</h4>
+      <div class="row flex-lg-row row-cols-lg-2 px-4 align-items-center justify-content-center">
+        <div class="col-lg-6 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-start my-3 dec">
+            <img src="./img/web-templetsblue.webp" alt="Templates" class="img-fluid round" width="85%" height="100%">
+            <div class="ps-5 d-flex align-items-center">
+              <p class="lead fs-3 fw-bold">Templates </p>
+              <p class="text-secondary fs-5 ps-2">249 items</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-6 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-elementsblue.webp" alt="Elements" class="img-fluid round" width="85%" height="100%">
+            <div class="ps-5 d-flex align-items-center">
+              <p class="lead fs-3 fw-bold">Elements </p>
+              <p class="text-secondary fs-5 ps-2">1543 items</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-6 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-texturesblue.webp" alt="Textures" class="img-fluid round" width="85%" height="100%">
+            <div class="ps-5 d-flex align-items-center">
+              <p class="lead fs-3 fw-bold">Textures </p>
+              <p class="text-secondary fs-5 ps-2">720 items</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-6 text-center text-black">
+          <a href="#b" class="text-black fs-4 text-center my-3 dec">
+            <img src="./img/web-enviromentblue.webp" alt="Environments" class="img-fluid round" width="85%"
+              height="100%">
+            <div class="ps-5 d-flex align-items-center">
+              <p class="lead fs-3 fw-bold">Environments </p>
+              <p class="text-secondary fs-5 ps-2">28 items</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 16th hero -->
+    <div class="infinity-home-3d" style="opacity: 1;">
+      <div id="main3d"></div>
+      <video id="loop-video" muted="muted" autoplay="autoplay" playsinline="" class="lazyLoad isLoaded">
+        <source type="video/mp4"
+          src="https://umake.cdn.prismic.io/umake/4fd18534-e2b5-4785-8dc7-48776e67f6b7_LOOP3.mp4">
+      </video>
+      <div class="move-line">
+
+        <div class="boxes">
+          <div class="box" style="transform: translate3d(1870.89px, 0px, 0px);">
+            <marquee behavior="scroll" direction="right" scrollamount="35">
+              Easy &amp; Powerful &amp; Precise &amp; Design &amp; Mobile &amp; Content &amp; Easy &amp; Powerful &amp;
+              Precise &amp; Design &amp; Mobile &amp; Content &amp;Easy &amp; Powerful &amp; Precise &amp; Design &amp;
+              Mobile &amp; Content &amp;Easy &amp; Powerful &amp; Precise &amp; Design &amp; Mobile &amp; Content
+              &amp;Easy &amp; Powerful &amp; Precise &amp; Design &amp; Mobile &amp; Content &amp;Easy &amp; Powerful
+              &amp; Precise &amp; Design &amp; Mobile &amp; Content &amp;Easy &amp; Powerful &amp; Precise &amp; Design
+              &amp; Mobile &amp; Content &amp;Easy &amp; Powerful &amp; Precise &amp; Design &amp; Mobile &amp; Content
+              &amp;Easy &amp; Powerful &amp; Precise &amp; Design &amp; Mobile &amp; Content
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 17th hero -->
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./img/slide1.webp" class="img-thumbnail round" alt="slide" width="100%" height="260px">
+              <div class="card-body">
+                <p class="card-text lead fw-bold">The Experience Economy. The new Frontier</p>
+                <p>Evi Mayer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./img/slide2.webp" class="img-thumbnail round" alt="slide" width="100%" height="260px">
+              <div class="card-body">
+                <p class="card-text lead fw-bold">Apps 3.0-- Apps are here to stay &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>Evi Mayer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./img/slide3.webp" class="img-thumbnail round" alt="slide" width="100%" height="260px">
+              <div class="card-body">
+                <p class="card-text lead fw-bold">ARX Designers -- The Future Kings of Silicon Valley</p>
+                <p>Evi Mayer</p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 18th hero -->
+    <div class="container-fluid row flex-lg-row-reverse align-items-center justify-self-center py-3">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4 ps-5">
+        <h3 class="display-6 fw-bold lh-1 mb-3">Learn Design</h3>
+        <p class="lead">uMake offers hundreds of videos to help you learn design in no time. Easily search for a
+          specific topic or watch our short and to-the-point help videos.</p>
+        <button type="button" class="btn btn-outline-dark btn-lg px-4">Learn More &rarr;</button>
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6 row">
+        <div
+          class="mt-5 ms-5 card card-cover d-flex align-items-center text-center overflow-hidden text-black bg-light round shadow-lg col-12 col-md-10 col-lg-5 py-2">
+          <img src="./img/icn1.webp" alt="icn" class="img" width="65%" height="100%">
+          <h2 class="pt-2 mb-2 lh-1">The Basics</h2>
+          <p class="lead">Learn about the initial stages of working in uMake. It's simple, fast, and efficient.</p>
+
+        </div>
+        <div
+          class="mt-5 ms-5 card card-cover d-flex align-items-center text-center overflow-hidden text-black bg-light round shadow-lg col-12 col-md-10 col-lg-5 py-2">
+          <img src="./img/icn2.webp" alt="icn" class="img" width="65%" height="100%">
+          <h2 class="pt-2 mb-2 lh-1">Help Videos</h2>
+          <p class="lead">Get training and improve your skills using fun and supportive help videos.</p>
+
+        </div>
+        <div
+          class="mt-5 ms-5 card card-cover d-flex align-items-center text-center overflow-hidden text-black bg-light round shadow-lg col-12 col-md-10 col-lg-5 py-2">
+          <img src="./img/icn3.webp" alt="icn" class="img" width="65%" height="100%">
+          <h2 class="pt-2 mb-2 lh-1">How To</h2>
+          <p class="lead">Learn how to design while mastering uMake with these minutes-long tutorials.</p>
+
+        </div>
+        <div
+          class="mt-5 ms-5 card card-cover d-flex align-items-center text-center overflow-hidden text-black bg-light round shadow-lg col-12 col-md-10 col-lg-5 py-2">
+          <img src="./img/icn4.webp" alt="icn" class="img" width="65%" height="100%">
+          <h2 class="pt-2 mb-2 lh-1">Tips and Tricks</h2>
+          <p class="lead">We've developed our own tips and tricks over years of experience. Here's where we share them!
+          </p>
+
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+    <!-- 19th hero -->
+    <div class="container-fluid bg-light p-5 d-none d-md-block">
+      <div class="container flex-lg-row blue p-5 m-5 round div13th">
+        <div class="col-4 bg-hicon">
+          <img src="./img/bg-icon7.png" alt="bg-icon2" class="bg-19thicon1" width="50%" height="100%">
+          <img src="./img/bg-icon4.png" alt="bg-icon4" class="bg-19thicon2" width="20%" height="100%">
+          <img src="./img/bg-icon6.webp" alt="bg-icon6" class="bg-19thicon3" width="50%" height="100%">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="display-4 fw-bold text-white">Design in 3D. Publish Anywhere.</h2>
+          <button type="button" class="btn btn-light tblue btn-lg px-4">Download uMake</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <div class="py-5">
+      <div class="row">
+        <div class="col-3 offset-1 mx-3">
+          <form>
+            <img src="./img/uMake_Logo.81c06e6.svg" class="my-5 w-75" alt="">
+            <div class="form-group">
+              <select class="exampleFormControlSelect1 form-control" name="" id="">
+                <option value="">English</option>
+                <option value="">Chinese</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="col pt-3 mt-2">
+          <h5 class="fw-bold text-muted">Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 py-2 text-dark">uMake+</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Explore</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">App Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="col pt-3 mt-2">
+          <h5 class="fw-bold text-muted">Features</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 py-2 text-dark">Design</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Present</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Share & Publish</a></li>
+          </ul>
+        </div>
+
+        <div class="col pt-3 mt-2">
+          <h5 class="fw-bold text-muted">Why uMake</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 py-2 text-dark">Architects & Interior
+                Designers</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Graphic & UX Designers</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Buisness Owners</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Marketing & Sales</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Students & Teachers</a></li>
+          </ul>
+        </div>
+
+        <div class="col pt-3 mt-2">
+          <h5 class="fw-bold text-muted">Help</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 py-2 text-dark">Learn</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Forum</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">FAQ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col pt-3 mt-2">
+          <h5 class="fw-bold text-muted">Follow us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 py-2 text-dark">Instagram</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Youtube</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Facebook</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">Twitter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 pb-2 text-dark">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

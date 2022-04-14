@@ -1,0 +1,223 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #3742AD;
+    --cyan: #17B3BD;
+    --lightblue: #3B89F7;
+    --yellow: #FEDE89;
+    --pink: #cc8691;
+}
+@font-face{
+    font-family: "GraphikRegular","MabryRegular";
+    src: url(https://www.umake.com/);
+}
+
+*{
+    font-family: "GraphikRegular",sans-serif;
+}
+h1, h2{
+    font-family: "MabryRegular",sans-serif;
+}
+.btn-black{
+    background-color: var(--black);
+    color: var(--white);
+}
+.dec{
+    text-decoration: none;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+      z-index: 3;
+      backdrop-filter: blur(50px);
+      background-color: hsla(0,0%,100%,.5);
+       height: 70px;
+   }
+  
+.link{
+    text-decoration: none;
+}
+.main-media{
+    border: 15px solid black;
+    border-radius: 7px;
+    padding: 0 0px;
+}
+.main-media-white{
+    border: 10px solid white;
+    border-radius: 7px;
+    padding: 0 0px;
+}
+.div5th{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.phone{
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+}
+.div11th{
+    position: relative;
+    height: auto;
+    bottom: -30%;
+    right: 0;
+    z-index: 1;
+}
+.slides{
+    position: absolute;
+    width: 40%;
+    top: -80px;
+    right: 30%;
+    z-index: 1;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    padding: 100px 0 0 0;
+    border: 2px solid white;
+}
+.round{
+    border-radius: 20px;
+}
+.bg-Jav{
+    background-image: linear-gradient(to bottom, var(--blue),var(--cyan),var(--lightblue));
+}
+.blk-y{
+    position: relative;
+    left: -150px;
+}
+.blk-p{
+    position: absolute;
+    top: -20px;
+}
+.yellow{
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+.tblue{
+    color: var(--blue);
+}
+.pink{
+    background-color: var(--pink);
+}
+.blue{
+    background-color: var(--blue);
+}
+.div13th{
+    position: relative;
+    top: 0;
+}
+.zin{
+    z-index: 0;
+}
+.bg-hicon{
+    position: absolute;
+    height: 60%;
+}
+.bg-icon{
+    position: absolute;
+    bottom: -16%;
+    right: 94%;
+    z-index: -1;
+}
+.bg-icon1{
+    position: absolute;
+    bottom: -2%;
+    left: -29%;
+}
+.bg-icon2{
+    position: absolute;
+    top: 75%;
+    left: 90%;
+    z-index: 3;
+}
+.bg-icon3{
+    position: absolute;
+    top: 100%;
+    right: -35%;
+}
+.bg-icon4{
+    position: absolute;
+    top: 70%;
+    right: -28%;
+}
+.bg-icon5{
+    position: absolute;
+    bottom: -25%;
+    left: -35%;
+}
+.bg-gradient1{
+    background-image: linear-gradient(41.58deg,#5bc0d2 -2.97%,#437cf2 25.61%,#666cfd 48.53%,#a282d2 74.94%,#fcb3c1 99.16%);
+}
+.infinity-home-3d {
+    height: 780px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+}
+.infinity-home-3d .move-line {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    top: calc(50% - 50px);
+}
+.infinity-home-3d .move-line .boxes{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    }
+
+.infinity-home-3d .move-line .boxes .box{
+    position: absolute;
+    left: -100vw;
+    font-size: 72px;
+    color: var(--blue);
+}
+
+.slides2{
+    position: absolute;
+    width: 40%;
+    top: -120px;
+    right: 30%;
+    z-index: 1;
+}
+.bg-19thicon1{
+    position: absolute;
+    top: 41%;
+    left: 66vw;
+}
+.bg-19thicon2{
+    position: absolute;
+    top: 80%;
+    left: 50vw;
+}
+.bg-19thicon3{
+    position: absolute;
+    bottom: 55%;
+    left: 56vw;
+    transform: rotate(-20deg);
+}
+@media screen and (max-width: 600px) {
+    .dis, .infinity-home-3d{
+        display: none;
+    }
+    .blk-y{
+        position: relative;
+        left: 50px;
+    }
+    .blk-p{
+        position: absolute;
+        top: -20px;
+        left: 3%;
+    }
+}
